@@ -1,0 +1,42 @@
+/* pages/home/home.wxss */
+.box {
+  display: flex;
+  justify-content: space-around;
+  position: absolute;
+  bottom: 60px;
+  width: 100%;
+}
+
+.box cover-image {
+  width: 50px;
+  height: 50px;
+  opacity: .7;
+}
+
+.rechoose {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  bottom: 60px;
+}
+
+.rechoose button {
+  width: 150px;
+}
+
+.face-info-pos {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 40px 0;
+  background-color: rgba(53, 73, 94, .7);
+  width: 70%;
+}
+
+.face-info-box {
+  font-size: 18px;
+  padding: 20px 70px;
+  color: #f1f2f3;
+}

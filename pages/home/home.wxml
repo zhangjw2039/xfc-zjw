@@ -1,0 +1,26 @@
+<!--pages/home/home.wxml-->
+<camera wx:if="{{!isShowPic}}" style="height: {{wh}}px; width: 100%" flash="off" device-position="{{isBack ? 'front' : 'back'}}">
+  <cover-view class="box">
+    <!-- 切换摄像头 -->
+    <cover-image src="/assets/images/icons/reverse.png" bindtap="reversehandle"></cover-image>
+    <cover-image src="/assets/images/icons/camera.png" bindtap="takePhoto"></cover-image>
+    <cover-image src="/assets/images/icons/album.png" bindtap="choosePhoto"></cover-image>
+  </cover-view>
+</camera>
+
+<view wx:else>
+  <image src="{{photoSrc}}" mode="aspectFill" style="display:block; width: 100%; height: {{wh}}px"></image>
+  <view class="rechoose">
+    <button type="warn" bindtap="chooseAgin">重新选择照片</button>
+  </view>
+  <view class="face-info-pos" wx:if="{{face}}">
+    <view class="face-info-box">
+      <view>年龄：{{face.age}}岁</view>
+      <view>颜值：{{face.beauty}}分</view>
+      <view>情绪：{{map.emotion[face.emotion]}}</view>
+      <view>表情：{{map.expression[face.expression]}}</view>
+      <view>性别：{{map.gender[face.gender]}}</view>
+      <view>眼镜：{{map.glasses[face.glasses]}}</view>
+    </view>
+  </view>
+</view>
